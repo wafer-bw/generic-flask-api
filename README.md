@@ -99,7 +99,7 @@ Once the app is up and running, try going through these examples. The examples a
 
 1. Check that things are working at http://localhost:8000. You should see something like this:
     ```
-    {"http_code":200,"msg":"Hello Worldd!","pagination":{},"results":[],"success":true}
+    {"http_code":200,"msg":"Hello World!","pagination":{},"results":[],"success":true}
     ```
 2. Create a couple fruits. Run this a second time to see what happens when you try to create something that already exists.
     ```
@@ -156,9 +156,7 @@ Steps to get a backup mysqldump `.sql` file and to apply it to a running mysql d
     docker exec {mysql_container_id} /usr/bin/mysqldump -u{user} -p{password} {database_name} > backup.sql
     ```
 3. You may need to remove a line at the top of your `backup.sql` file warning you about CLI password usage, it will look like this:
-    ```
-    mysqldump: [Warning] Using a password on the command line interface can be insecure.
-    ```
+    >mysqldump: [Warning] Using a password on the command line interface can be insecure.
 4. To restore / apply the dump to a database, use:
     ```
     cat backup.sql | docker exec -i {mysql_container_id} /usr/bin/mysql -u{user} -p{password} {database_name}
@@ -188,7 +186,6 @@ Steps to use [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/) to
         ```
 5. As per the Flask-Migrate documentation:
     >The migration script needs to be reviewed and edited, as Alembic currently does not detect every change you make to your models. In particular, Alembic is currently unable to detect table name changes, column name changes, or anonymously named constraints.
-
 6. Apply the migration using:
     ```
     flask db upgrade
