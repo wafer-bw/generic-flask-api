@@ -1,0 +1,21 @@
+version: "3.0"
+
+services:
+
+  mysql:
+    image: hypriot/rpi-mysql:arm-5.5
+    restart: always
+    env_file: ./api/environments/dev.env
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+
+  redis:
+    image: arm32v7/redis:5
+    restart: always
+    env_file: ./api/environments/dev.env
+    ports:
+      - "6379:6379"
+    expose:
+      - "6379"

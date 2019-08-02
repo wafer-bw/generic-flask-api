@@ -1,0 +1,32 @@
+version: "3.0"
+
+services:
+
+  mysql:
+    image: hypriot/rpi-mysql:arm-5.5
+    restart: always
+    env_file: ./api/environments/prod.env
+
+  redis:
+    image: arm32v7/redis:5
+    restart: always
+    env_file: ./api/environments/prod.env
+
+  api:
+    build: ./api
+    restart: always
+    env_file: ./api/environments/prod.env
+    depends_on:
+      - mysql
+      - redis
+
+  nginx:
+    build: ./api/nginx
+    restart: always
+    env_file: ./api/environments/prod.env
+    depends_on:
+      - api
+    ports:
+      - "80:80"
+    expose:
+      - "80"

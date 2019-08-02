@@ -1,0 +1,11 @@
+.DS_Store
+.vscode
+
+__pycache__
+
+env
+venv
+
+# May want to remove this in your own repo
+# to track db migrations in source control
+api/migrations
