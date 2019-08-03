@@ -91,7 +91,7 @@ Run API in a production environment setting using `nginx` and `gunicorn` on an A
     * `MYSQL_ROOT_PASSWORD`
 2. Run API - Flask APP (Gunicorn), Redis, MySQL, and NGINX.
     ```
-    docker-compose -f docker-compose--arm-prod.yml up --build -d
+    docker-compose -f docker-compose-arm-prod.yml up --build -d
     ```
 
 # Interacting with the API
