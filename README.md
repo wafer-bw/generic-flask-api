@@ -23,7 +23,7 @@ Steps to start running this API...
     ```
 5. Install requirements/dependencies
     ```
-    pip install -r requirements.txt
+    pip install -r api/requirements.txt
     ```
 
 ## Devlopment Environment
