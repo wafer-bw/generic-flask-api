@@ -152,7 +152,7 @@ An example of how the models in this API are generic using the Development Envir
     ```
 
 # Backup & Restore DB
-Steps to get a backup mysqldump `.sql` file and to apply it to a running mysql database, thanks to `spalladino`'s suggestion [here](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb).
+Steps to get a backup mysqldump `.sql` file and apply it to a running mysql database, thanks to `spalladino`'s suggestion [here](https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb).
 1. You can obtain the `mysql_container_id` mentioned in the following steps using `docker ps`
 2. Get a mysqldump backup `.sql` file by using:
     ```
