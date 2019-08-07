@@ -8,4 +8,4 @@ RUN pip install --upgrade pip && \
 COPY . /
 RUN chmod +x /run_api_server.sh
 
-ENTRYPOINT /run_api_server.sh
+ENTRYPOINT ["bash", "/run_api_server.sh"]
