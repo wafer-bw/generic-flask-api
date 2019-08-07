@@ -38,7 +38,9 @@ def create(model:str) -> Tuple[Response, int]:
         item = models[model](**load_json(request.data))
         item.save()
 
-        return Responder().succeed(msg=f"Created {item}")
+        responder = Responder()
+        responder.results.append(item.as_dict)
+        return responder.succeed(msg=f"Created {item}")
 
     except TypeError:
         raise BadRequest(f"Improper/missing POST data")
