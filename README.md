@@ -1,6 +1,9 @@
 # generic-flask-api
 A generic API built using Flask, Redis, MySQL, Gunicorn, and NGINX.
 
+## Goal
+To, as a learning experience, create an API that I can easily spin up with the minimal requirements I feel I will frequently need, and to design the controllers (API endpoint code) in such a way that I only need to add/remove/modify the database models code to add/remove/modify API endpoints.
+
 # Setup
 Steps to start running this API...
 
