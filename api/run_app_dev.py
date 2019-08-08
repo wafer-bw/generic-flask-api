@@ -2,7 +2,6 @@
 Entry Point for application, running this will run the app
 """
 
-import sys
 import argparse
 from app.config import dev_cli_choices
 from app.factory import create_app
