@@ -201,7 +201,7 @@ Steps to use [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/) to
 * [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
 * [Flask-Caching](https://flask-caching.readthedocs.io/en/latest/)
 * [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
-* [FLask-Bcrypt](https://flask-bcrypt.readthedocs.io/en/latest/)
+* [Flask-Bcrypt](https://flask-bcrypt.readthedocs.io/en/latest/)
 * [Gunicorn Docs](https://gunicorn.org/#docs)
 * MySQL
     * [MySQL DockerHub](https://hub.docker.com/_/mysql)
